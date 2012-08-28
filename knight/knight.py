@@ -1,0 +1,1 @@
+for a,b in[map(int,raw_input().split())for i in[1]*input()]:print a*b*(a*b-1)-4*(max(2*a*b-3*(a+b)+4,0))
