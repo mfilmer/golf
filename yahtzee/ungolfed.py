@@ -47,19 +47,27 @@ def main():
     
     #small straight (4 sequential)
     #30
+    dice = getDice()
     
     #large straight (5 sequential)
     #40
-    s += 0 if [x for x in dice if dice.count(x) > 1] else 40
+    dice = getDice()
+    s += 40 if not [x for x in dice if dice.count(x) > 1] and (1 not in dice) or (6 not in dice) else 0
     
     #full house
     #25
+    dice = getDice()
+    s += 25 if [x for x in dice if dice.count(x) == 2] and [x for x in dice if dice.count == 3] else 0
     
     #chance
     #sum of all dice
+    dice = getDice()
+    s += sum(dice)
     
     #yahtzee
     #50
+    dice = getDice()
+    s += 50 if dice.count(dice[0]) == 5 else 0
 
 if __name__ == '__main__':
     main()
