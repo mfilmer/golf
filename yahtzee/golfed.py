@@ -8,7 +8,7 @@
 # d=D();s+=[0,50][d.count(d[0])==5]
 # print s+S(D())
 
-#302/364
+#301/363
 S=sum;R=range;D=[map(int,raw_input().split())for i in R(13)];s=S(x for i in R(6)for x in D[i]if x==i+1)
 for i in R(2):d=D[6+i];s+=[0,S(d)][max(map(d.count,d))>2+i];d=sorted(set(D[9+i]));s+=[0,30+i*10]['1, 1, 1'+', 1'*i in`[d[x+1]-d[x]for x in R(len(d)-1)]`]
-e=D[8];a=map(e.count,e);d=D[11];print s+S(D[12])+[0,50][d.count(d[0])==5]+[0,25][2in a and 3in a or 5in a]
+e=D[8];a=map(e.count,e);d=D[11];print s+S(D[12])+[0,50][d.count(d[0])>4]+[0,25][2in a and 3in a or 5in a]
