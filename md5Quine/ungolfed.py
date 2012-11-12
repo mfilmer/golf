@@ -1,0 +1,1 @@
+r='r=%r;import md5;print "MD5 sum of my source is: "+md5.new(r%%r).hexdigest()';import md5;print "MD5 sum of my source is: "+md5.new(r%r).hexdigest()

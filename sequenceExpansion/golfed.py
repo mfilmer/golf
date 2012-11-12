@@ -1,0 +1,1 @@
+for n in inStr.split(','):a=n.split('-');a if len(a)<2 else eval(`a[0]`+'<'+`n`+'<'+`a[1]`)
